@@ -3,15 +3,17 @@ import { NavController } from 'ionic-angular';
 import {HttpProvider} from '../../providers/http/http';
 import { LoadingController } from 'ionic-angular';
 //import { HttpClientModule } from '@angular/common/http';
+import { ScorePage } from '../score/score';
 
 @Component({
   selector: 'page-play',
   templateUrl: 'play.html',
   providers:[HttpProvider]
 })
+
 export class PlayPage 
 {
-
+  
   json: any;
   loading: any;
 
@@ -61,5 +63,13 @@ export class PlayPage
      }
      return ret;
   }
-  
+
+
+  goToScore(params){
+    if (!params) params = {};
+    this.navCtrl.push(ScorePage);
+  }
+  update(){
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
+}
 }
