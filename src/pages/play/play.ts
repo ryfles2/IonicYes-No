@@ -12,20 +12,18 @@ import { LoadingController } from 'ionic-angular';
 export class PlayPage 
 {
 
-  eventData: any;
+  json: JSON;
   loading: any;
+
+  category : string;
+  question: string;
+  correctAnswer: string;
   
   //injecting HttpProvider with angular 2 dependancy in ctor + Loader
   constructor(public navCtrl: NavController, private httpProvider:HttpProvider, public loadingCtrl: LoadingController) 
   {
   
-    this.loading = this.loadingCtrl.create
-    (
-      {
-        content: `
-        <ion-spinner ></ion-spinner>`
-      }
-    );
+    
     this.getdata();
   }
   
@@ -36,8 +34,12 @@ export class PlayPage
       data => 
     {
       console.log(data);
-      this.eventData=JSON.parse(JSON.stringify(data));
-      console.log(this.eventData);
+      this.json=JSON.parse(JSON.stringify(data));
+      this.question= this.loopEscape((this.json.results["0"].question).toString());
+      this.category= this.loopEscape((this.json.results["0"].category).toString());
+      this.correctAnswer= this.loopEscape((this.json.results["0"].correct_answer).toString());
+      
+      console.log(this.json);
     },
     err =>
     {
@@ -49,4 +51,15 @@ export class PlayPage
     }
     );
   }
+
+  loopEscape(badString: string):string
+  {
+    var ret: string = badString;
+    for(var i=0;i<20;i++)
+     {
+      ret=ret.replace("&amp;", "&").replace("&quot;", "\"").replace("&apos;", "'").replace("&gt;",">").replace("&lt;", "<").replace("&#039;","'");
+     }
+     return ret;
+  }
+  
 }

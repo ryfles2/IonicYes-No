@@ -10,7 +10,7 @@
 </ion-header>
 <ion-content padding id="page1" style="background-color:#03A9F4;">
   <h1 id="play-heading1" style="color:#000000;">
-    Heading
+     {{category}}
   </h1>
   <div id="play-markdown1" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
@@ -21,14 +21,24 @@
     </p>
   </div>
   <button id="play-button1" ion-button color="positive" large style="font-size:20px;">
-    Tap me!
+    YES
   </button>
   <button id="play-button3" ion-button clear color="positive" large style="font-size:2px;">
     Tap me!
   </button>
   <button id="play-button2" ion-button color="positive" large style="font-size:20px;">
-    Tap me!
+    NO
   </button>
+  <p>
+    correctAnswer: {{correctAnswer}}
+   </p>
+   <!-- <p>
+    category: {{category}}
+   </p> -->
+   <p>
+    question: {{question}}
+   </p>
+   
   <!-- <ion-list >
     <ion-item text-wrap *ngFor="let item of eventData" >
     <p >{{item.calEvent.orgType}}</p>
