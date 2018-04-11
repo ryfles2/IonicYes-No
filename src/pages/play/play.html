@@ -9,40 +9,29 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page1" style="background-color:#03A9F4;">
-  <h1 id="play-heading1" style="color:#000000;">
-     {{category}}
-  </h1>
-  <div id="play-markdown1" class="show-list-numbers-and-dots">
+  <h3 id="play-heading1" style="color:#000000;font-style:italic;text-align:center;">
+    {{category}}
+  </h3>
+  <div id="play-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      Some friendly
-      <strong>
-        markdown
-      </strong>
+      {{question}}
     </p>
   </div>
-  <button id="play-button1" ion-button color="positive" large style="font-size:20px;">
-    YES
+  <div class="spacer" style="width:300px;height:199px;" id="play-spacer1"></div>
+  <button id="play-button1" ion-button color="royal" large style="font-size:20px;border-radius:10px 10px 10px 10px;">
+    Yes
   </button>
-  <button id="play-button3" ion-button clear color="positive" large style="font-size:2px;">
-    Tap me!
-  </button>
-  <button id="play-button2" ion-button color="positive" large style="font-size:20px;">
-    NO
+  <button id="play-button4" ion-button clear color="positive" large style="font-size:2px;"></button>
+  <button id="play-button3" ion-button clear color="positive" large style="font-size:2px;"></button>
+  <button id="play-button5" ion-button clear color="positive" large style="font-size:2px;"></button>
+  <button id="play-button6" ion-button clear color="positive" large style="font-size:2px;"></button>
+  <button id="play-button7" ion-button clear color="positive" large style="font-size:2px;"></button>
+  <button id="play-button8" ion-button clear color="positive" large style="font-size:2px;"></button>
+  <button id="play-button2" ion-button color="royal" large style="font-size:20px;border-radius:10px 10px 10px 10px;">
+    No
   </button>
   <p>
     correctAnswer: {{correctAnswer}}
    </p>
-   <!-- <p>
-    category: {{category}}
-   </p> -->
-   <p>
-    question: {{question}}
-   </p>
-   
-  <!-- <ion-list >
-    <ion-item text-wrap *ngFor="let item of eventData" >
-    <p >{{item.calEvent.orgType}}</p>
-    <p >{{item.data.title}}</p>
-    </ion-item>
-    </ion-list> -->
 </ion-content>
+

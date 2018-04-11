@@ -12,7 +12,7 @@ import { LoadingController } from 'ionic-angular';
 export class PlayPage 
 {
 
-  json: JSON;
+  json: any;
   loading: any;
 
   category : string;
