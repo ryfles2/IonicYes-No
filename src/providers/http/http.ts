@@ -15,8 +15,7 @@ export class HttpProvider {
   }
   
   getJsonData(){
-  //return this.http.get('https://opentdb.com/api.php?amount=1&type=boolean').map((res: Response) => res.json());
-  return this.http.get('https://opentdb.com/api.php?amount=1&type=boolean').map(res => res );
+  return this.http.get('https://opentdb.com/api.php?amount=1&type=multiple').map(res => res );
   
 }
 
