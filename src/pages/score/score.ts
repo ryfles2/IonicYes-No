@@ -9,5 +9,6 @@ export class ScorePage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+ 
+
 }
