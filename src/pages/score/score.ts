@@ -22,7 +22,9 @@ export class ScorePage {
    * @memberof HomePage
    */
   constructor(public navCtrl: NavController) {
+    
     this.gameInstance = new Game();
+    
   }
  
 
