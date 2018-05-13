@@ -25,7 +25,8 @@ export class Game extends Phaser.Game {
         var poly, graphics;
         function preload()
         {
-
+ 
+            
         }
         // add some game states
         function create() {
