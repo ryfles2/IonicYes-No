@@ -40,8 +40,8 @@ export class Game extends Phaser.Game {
 
             // this.load.atlas('breakout', 'assets/games/breakout/breakout.png', 'assets/games/breakout/breakout.json');
             // this.load.image('starfield', 'assets/misc/starfield.jpg');
-            this.load.atlas('breakout', '../assets/pong/breakout.png', '../assets/pong/breakout.json');
-            this.load.image('starfield', '../assets/pong/starfield.jpg');
+            this.load.atlas('breakout', 'assets/pong/breakout.png', 'assets/pong/breakout.json');
+            this.load.image('starfield', 'assets/pong/starfield.jpg');
         
         }
         
@@ -91,7 +91,7 @@ export class Game extends Phaser.Game {
             }
         
             //gracz!!!!!!!!!!!!!
-            paddle = this.add.sprite(this.world.centerX, window.innerHeight-100, 'breakout', 'paddle_big.png');
+            paddle = this.add.sprite(this.world.centerX, window.innerHeight-200, 'breakout', 'paddle_big.png');
             paddle.anchor.setTo(0.5, 0.5);
         
             this.physics.enable(paddle, Phaser.Physics.ARCADE);
